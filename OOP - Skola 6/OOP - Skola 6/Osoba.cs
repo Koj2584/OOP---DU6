@@ -39,7 +39,7 @@ namespace OOP___Skola_6
         {
             this.jmeno = jmeno;
             this.prijmeni = prijmeni;
-            this.hmotnost = hmotnost;
+            this.Hmotnost = hmotnost;
             this.Vyska = vyska;
         }
 
