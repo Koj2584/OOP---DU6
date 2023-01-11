@@ -14,7 +14,8 @@ namespace OOP___Skola_6
         float vyska;
         public string Jmeno { get => jmeno; set { jmeno = value; } }
         public string Prijmeni { get => prijmeni; set { prijmeni = value; } }
-        public short Hmotnost {
+        public short Hmotnost
+        {
             get => hmotnost;
             set
             {
@@ -22,7 +23,8 @@ namespace OOP___Skola_6
                     hmotnost = value;
             }
         }
-        public float Vyska {
+        public float Vyska
+        {
             get => vyska;
             set
             {
@@ -38,17 +40,17 @@ namespace OOP___Skola_6
             this.jmeno = jmeno;
             this.prijmeni = prijmeni;
             this.hmotnost = hmotnost;
-            this.vyska = vyska;
+            this.Vyska = vyska;
         }
 
         public virtual float BMI()
         {
-            return hmotnost / (vyska * vyska);
+            return (float)Math.Round(hmotnost / (vyska * vyska), 2);
         }
 
         public override string ToString()
         {
-            return String.Format("Jméno: {0}\nPříjmení: {1}\nHmotnost: {2}\nVýška: {3}\nBmi: {4}",jmeno,prijmeni,hmotnost,vyska,BMI());
+            return String.Format("Jméno: {0}\nPříjmení: {1}\nHmotnost: {2}\nVýška: {3}\nBMI: {4}", jmeno, prijmeni, hmotnost, vyska, BMI());
         }
     }
 }

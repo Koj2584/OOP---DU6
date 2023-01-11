@@ -16,5 +16,35 @@ namespace OOP___Skola_6
         {
             InitializeComponent();
         }
+
+        Pacient p;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                p = new Pacient(textBox1.Text, textBox2.Text, short.Parse(textBox3.Text), float.Parse(textBox4.Text), float.Parse(textBox5.Text));
+                panel1.Enabled = true;
+            }
+            catch
+            {
+                MessageBox.Show("Špatný formát!!!");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("BMI: " + p.BMI());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ABSI: " + p.ABSI());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(p.ToString());
+        }
     }
 }
